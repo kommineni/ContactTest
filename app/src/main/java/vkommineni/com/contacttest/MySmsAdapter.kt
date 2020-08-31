@@ -148,7 +148,12 @@ class MySmsAdapter(
             context.startActivity(defineIntent)
             */
 
-
+            val intent = Intent(Intent.ACTION_VIEW).apply {
+                addCategory(Intent.CATEGORY_LAUNCHER);
+                setClassName("com.android.mms", "com.android.mms.ui.SearchActivity");
+                putExtra("intent_extra_data_key", "string_to_search_for");
+            }
+            startActivity(intent)
         })
         return convertView!!
 
