@@ -52,6 +52,8 @@ class MainActivity : AppCompatActivity() {
             listTitle?.setText("Sms")
             requestSmsPermission()
         }
+
+        println("Test Print for Git commit ")
     }
 
     private val contacts: Unit
